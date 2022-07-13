@@ -1,3 +1,7 @@
+# Bar-Darts
+
+Explore every live show of the band, Deftones! Click on each track to see the setlist which includes encores as well as featured artists. Sort by date or search for the venue, city, state, or country. Pagination and other features are implemented with react-bootstrap-table.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,3 +72,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# deftones-live
