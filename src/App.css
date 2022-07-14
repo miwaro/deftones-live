@@ -88,6 +88,15 @@ transform: translate(30px, -8px)
   padding: 20px;
  }
 
+ .red {
+  background-color: red;
+ }
+
+ .blue {
+  background-color: blue;
+
+ }
+
  .search label { display: block; }
 
  .search input { max-width: 500px; margin: 0 auto; }

@@ -78,21 +78,21 @@ function App() {
           show.sets?.set[1]?.song === undefined &&
           show.sets?.set[2]?.song === undefined
         ) {
-          // return alert("nothing here yet")
           setErrorMessage("Nothing Here Yet")
         }
         show.sets?.set[0]?.song.forEach((track) => {
           if (track?.tape !== undefined) {
-            //track.parentElement.classList.add("tape")
+            track.tape = '  '
+            track.name = `${track.name} ${track.tape}`
           }
           if (track.info !== undefined) {
-            track.name = `${track.name} <span class=\"info\">${track.info}</span>`
+            track.name = `${track.name} ${track.info}`
           }
           if (track?.with?.name !== undefined) {
-            track.name = `${track.name} <span class=\"with"\>with ${track.with.name}</span>`
+            track.name = `${track.name} with ${track.with.name}`
           }
           if (track?.cover?.name !== undefined) {
-            track.name = `${track.name} <span class=\"cover"\>${track.cover.name} Cover</span>`
+            track.name = `${track.name} ${track.cover.name}`
           }
 
           showTrackList.push(track.name)
@@ -127,7 +127,7 @@ function App() {
         keyField="id"
         data={showData}
         columns={columns}
-        // defaultSorted
+
 
         search={{
           searchFormatted: true
@@ -161,8 +161,6 @@ function App() {
         }
       </ToolkitProvider>
 
-
-
       {showTracks &&
         <div class="tablecontain">
           <div className="setlist__container">
@@ -171,9 +169,11 @@ function App() {
               <hr />
               {
                 showTrackList.map((track, i) => {
+                  console.log('trackkkkkkk', track)
+                  console.log(typeof track)
                   return (
                     <div style={{ border: '1px solid #FFF', padding: '5px', backgroundColor: 'rgba(128, 128, 128, 0.636)' }} >
-                      <li style={{ listStyle: 'none', fontWeight: 'bold', padding: '5px 0' }}>{`${i + 1}. ${track}`}</li>
+                      <li className={track.includes('  ') ? 'red' : 'blue'} style={{ listStyle: 'none', fontWeight: 'bold', padding: '5px 0' }}>{`${i + 1}. ${track}`}</li>
                     </div>
                   )
                 })
@@ -207,8 +207,8 @@ function App() {
             </div>
           </div>
         </div>
-        }
-      </div >
+      }
+    </div >
   );
 }
 
