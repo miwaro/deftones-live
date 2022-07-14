@@ -82,9 +82,19 @@ function App() {
           setErrorMessage("Nothing Here Yet")
         }
         show.sets?.set[0]?.song.forEach((track) => {
-          if (track?.with?.name !== undefined) {
-            track.name = `${track.name} with ${track.with.name}`
+          if (track?.tape !== undefined) {
+            //track.parentElement.classList.add("tape")
           }
+          if (track.info !== undefined) {
+            track.name = `${track.name} <span class=\"info\">${track.info}</span>`
+          }
+          if (track?.with?.name !== undefined) {
+            track.name = `${track.name} <span class=\"with"\>with ${track.with.name}</span>`
+          }
+          if (track?.cover?.name !== undefined) {
+            track.name = `${track.name} <span class=\"cover"\>${track.cover.name} Cover</span>`
+          }
+
           showTrackList.push(track.name)
         })
       })
