@@ -127,86 +127,78 @@ function App() {
         {
           props => (
             <div>
-              <div style={{ display: 'flex' }}>
+              <div>
                 <header className="App-header" >
-                  <span className="deftones__header">Deftones <em>Live</em></span>
-                  <SearchBar {...props.searchProps} placeholder="Search..." autofocus />
+                  <div className="deftones__header">Deftones<span>Live</span></div>
+                  <div className="deftones__menu">
+                    <span>HOME</span> - <span>SHOWS</span> - <span>SONGS</span>
+                  </div>
+                  <div className="search"><SearchBar {...props.searchProps} placeholder="Search..." autofocus /></div>
                 </header>
               </div>
-              <BootstrapTable
-                sort={{ dataField: 'eventDate', order: 'desc' }}
-                bordered={false}
-                pagination={!showTracks ? pagination : null}
-                rowEvents={tableRowEvents}
-                rowStyle={{ backgroundColor: '#0d0d0d', color: 'white' }}
-                {...props.baseProps}
-              />
+              <div class="tablecontain">
+                <BootstrapTable
+                  sort={{ dataField: 'eventDate', order: 'desc' }}
+                  bordered={false}
+                  pagination={!showTracks ? pagination : null}
+                  rowEvents={tableRowEvents}
+                  rowStyle={{ backgroundColor: '#0d0d0d', color: 'white' }}
+                  {...props.baseProps}
+                />
+              </div>
             </div>
           )
         }
       </ToolkitProvider>
 
-      {
-        showTracks && !errorMessage &&
-        <div style={{ display: 'flex' }}>
-          <button className='btn__goBack' onClick={handleGoBack}>Go Back</button>
-          <h1 style={{ margin: '0 auto', paddingBottom: '10px', color: '#FFF' }}><em>SETLIST</em></h1>
-        </div>
-      }
 
-      {
-        errorMessage &&
-        <div style={{ display: 'flex' }}>
-          <button className='btn__goBack' onClick={handleGoBack}>Go Back</button>
-          <h1 style={{ margin: '0 auto', paddingBottom: '10px', color: 'red' }}><em>{errorMessage}</em></h1>
-        </div>
-
-      }
 
       {showTracks &&
-        <div className="setlist__container">
-          <section>
-            <h4>Main Set</h4>
-            <hr />
-            {
-              showTrackList.map((track, i) => {
-                return (
-                  <div style={{ border: '1px solid #FFF', padding: '5px', backgroundColor: 'rgba(128, 128, 128, 0.636)' }} >
-                    <li style={{ listStyle: 'none', fontWeight: 'bold', padding: '5px 0' }}>{`${i + 1}. ${track}`}</li>
-                  </div>
-                )
-              })
-            }
-          </section>
-          <section>
-            <h4>Encore 1</h4>
-            <hr />
-            {
-              encore1.map((encore, i) => {
-                return (
-                  <div style={{ border: '1px solid #FFF', padding: '5px', backgroundColor: 'rgba(128, 128, 128, 0.636)' }}>
-                    <li style={{ listStyle: 'none', fontWeight: 'bold' }}>{`${i + 1}. ${encore}`}</li>
-                  </div>
-                )
-              })
-            }
-          </section>
-          <section>
-            <h4>Encore 2</h4>
-            <hr />
-            {
-              encore2.map((encore2, i) => {
-                return (
-                  <div>
-                    <li style={{ listStyle: 'none', fontWeight: 'bold' }}>{`${i + 1}. ${encore2}`}</li>
-                  </div>
-                )
-              })
-            }
-          </section>
+        <div class="tablecontain">
+          <div className="setlist__container">
+            <div>
+              <h4>Main Set</h4><button className='btn__goBack' onClick={handleGoBack}>Go Back</button>
+              <hr />
+              {
+                showTrackList.map((track, i) => {
+                  return (
+                    <div style={{ border: '1px solid #FFF', padding: '5px', backgroundColor: 'rgba(128, 128, 128, 0.636)' }} >
+                      <li style={{ listStyle: 'none', fontWeight: 'bold', padding: '5px 0' }}>{`${i + 1}. ${track}`}</li>
+                    </div>
+                  )
+                })
+              }
+            </div>
+            <div>
+              <h4>Encore 1</h4>
+              <hr />
+              {
+                encore1.map((encore, i) => {
+                  return (
+                    <div style={{ border: '1px solid #FFF', padding: '5px', backgroundColor: 'rgba(128, 128, 128, 0.636)' }}>
+                      <li style={{ listStyle: 'none', fontWeight: 'bold' }}>{`${i + 1}. ${encore}`}</li>
+                    </div>
+                  )
+                })
+              }
+            </div>
+            <div>
+              <h4>Encore 2</h4>
+              <hr />
+              {
+                encore2.map((encore2, i) => {
+                  return (
+                    <div>
+                      <li style={{ listStyle: 'none', fontWeight: 'bold' }}>{`${i + 1}. ${encore2}`}</li>
+                    </div>
+                  )
+                })
+              }
+            </div>
+          </div>
         </div>
-      }
-    </div >
+        }
+      </div >
   );
 }
 
