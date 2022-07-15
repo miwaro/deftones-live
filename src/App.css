@@ -49,8 +49,17 @@ transform: translate(30px, -8px)
   background-color: #0d0d0d;
   color: #FFF;
   padding: 30px 0;
-  border-top: 1px solid #FFF;
   height: 100vh;
+}
+
+.setlist__container h4 {
+  display: inline-block;
+}
+
+.setlist__container button {
+  float: right;
+  display: block;
+  margin-top: -5px;
 }
 
 .page-item.active .page-link {
@@ -88,14 +97,14 @@ transform: translate(30px, -8px)
   padding: 20px;
  }
 
- .red {
-  background-color: red;
+ .tape {
+  
  }
 
- .blue {
-  background-color: blue;
-
+ .group {
+  padding:  20px 0;
  }
+
 
  .search label { display: block; }
 

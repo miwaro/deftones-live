@@ -164,24 +164,22 @@ function App() {
       {showTracks &&
         <div class="tablecontain">
           <div className="setlist__container">
-            <div>
+            <div class="group">
               <h4>Main Set</h4><button className='btn__goBack' onClick={handleGoBack}>Go Back</button>
-              <hr />
               {
                 showTrackList.map((track, i) => {
                   console.log('trackkkkkkk', track)
                   console.log(typeof track)
                   return (
                     <div style={{ border: '1px solid #FFF', padding: '5px', backgroundColor: 'rgba(128, 128, 128, 0.636)' }} >
-                      <li className={track.includes('  ') ? 'red' : 'blue'} style={{ listStyle: 'none', fontWeight: 'bold', padding: '5px 0' }}>{`${i + 1}. ${track}`}</li>
+                      <li className={track.includes('  ') ? 'tape' : ''} style={{ listStyle: 'none', fontWeight: 'bold', padding: '5px 0' }}>{`${i + 1}. ${track}`}</li>
                     </div>
                   )
                 })
               }
             </div>
-            <div>
+            <div class="group">
               <h4>Encore 1</h4>
-              <hr />
               {
                 encore1.map((encore, i) => {
                   return (
@@ -192,7 +190,7 @@ function App() {
                 })
               }
             </div>
-            <div>
+            <div class="group">
               <h4>Encore 2</h4>
               <hr />
               {
