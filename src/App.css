@@ -35,7 +35,7 @@ transform: translate(30px, -8px)
 
     justify-content: center;
     align-items: center;
-	  
+    
     padding: 15px;
     gap:20px;
     font-size: 40px;
@@ -79,6 +79,10 @@ transform: translate(30px, -8px)
  }
 
  .deftones__menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
   font-family: 'Raleway', sans-serif;
   font-size: 18px;
  }

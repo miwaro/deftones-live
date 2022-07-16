@@ -4,21 +4,29 @@ import { Provider } from 'react-redux';
 import './index.css';
 import App from './App';
 import { store } from './features/store';
-// TODO: Add router
-// import {
-//   BrowserRouter,
-//   Routes,
-//   Route,
-// } from "react-router-dom";
+import Home from './pages/Home.js';
+import Shows from './pages/Shows.js';
+import Songs from './pages/Songs.js';
 
+import {
+  BrowserRouter, Routes,
+  Route,
+} from "react-router-dom";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
 root.render(
-  <Provider store={store}>
-    {/* <React.StrictMode> */}
-    <App />
-    {/* </React.StrictMode> */}
-  </Provider>
+  <BrowserRouter>
+    <Provider store={store}>
+      <Routes>
+        <Route path="/" element={<App />} />
+        <Route path="home" element={<Home />} />
+        <Route path="shows" element={<Shows />} />
+        <Route path="songs" element={<Songs />} />
+      </Routes>
+    </Provider>
+  </BrowserRouter>
+
 );
 
 
