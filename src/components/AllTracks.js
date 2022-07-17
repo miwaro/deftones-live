@@ -1,12 +1,13 @@
 function AllTracks({ showTrackList, encore1, encore2, goBack }) {
-
+    console.log(encore1)
+    console.log(typeof encore1)
     return (
         <div>
             <div className="tablecontain">
                 <div className="setlist__container">
                     <div>
                         <h4>Main Set</h4><button className='btn__goBack' onClick={goBack}>Go Back</button>
-                        
+
                         {
                             showTrackList.map((track, i) => {
                                 return (
@@ -18,8 +19,10 @@ function AllTracks({ showTrackList, encore1, encore2, goBack }) {
                         }
                     </div>
                     <div>
-                        <h4>Encore 1</h4>
-                        
+                        {encore1.length > 0 &&
+                            <h4>Encore 1</h4>
+                        }
+
                         {
                             encore1.map((encore, i) => {
                                 return (
@@ -31,8 +34,10 @@ function AllTracks({ showTrackList, encore1, encore2, goBack }) {
                         }
                     </div>
                     <div>
-                        <h4>Encore 2</h4>
-                        
+                        {encore2.length > 0 &&
+                            <h4>Encore 2</h4>
+                        }
+
                         {
                             encore2.map((encore2, i) => {
                                 return (
