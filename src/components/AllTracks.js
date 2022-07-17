@@ -9,8 +9,8 @@ function AllTracks({ showTrackList, encore1, encore2, goBack }) {
                         {
                             showTrackList.map((track, i) => {
                                 return (
-                                    <div key={i} style={{ border: '1px solid #FFF', padding: '5px', backgroundColor: 'rgba(128, 128, 128, 0.636)' }} >
-                                        <li className={track.includes('  ') ? 'tape' : ''} style={{ listStyle: 'none', fontWeight: 'bold', padding: '5px 0' }}>{`${i + 1}. ${track}`}</li>
+                                    <div key={i} className="allTracks">
+                                        <li >{`${i + 1}. ${track}`}</li>
                                     </div>
                                 )
                             })
@@ -24,8 +24,8 @@ function AllTracks({ showTrackList, encore1, encore2, goBack }) {
                         {
                             encore1.map((encore, i) => {
                                 return (
-                                    <div key={i} style={{ border: '1px solid #FFF', padding: '5px', backgroundColor: 'rgba(128, 128, 128, 0.636)' }}>
-                                        <li style={{ listStyle: 'none', fontWeight: 'bold' }}>{`${i + 1}. ${encore}`}</li>
+                                    <div key={i} className="allTracks">
+                                        <li>{`${showTrackList.length + (i + 1)}. ${encore}`}</li>
                                     </div>
                                 )
                             })
@@ -38,9 +38,10 @@ function AllTracks({ showTrackList, encore1, encore2, goBack }) {
 
                         {
                             encore2.map((encore2, i) => {
+                                let numOfTracks = showTrackList.length + encore1.length;
                                 return (
-                                    <div key={i}>
-                                        <li style={{ listStyle: 'none', fontWeight: 'bold' }}>{`${i + 1}. ${encore2}`}</li>
+                                    <div key={i} className="allTracks">
+                                        <li>{`${numOfTracks + (i + 1)}. ${encore2}`}</li>
                                     </div>
                                 )
                             })
