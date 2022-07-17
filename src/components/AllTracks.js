@@ -1,6 +1,4 @@
 function AllTracks({ showTrackList, encore1, encore2, goBack }) {
-    console.log(encore1)
-    console.log(typeof encore1)
     return (
         <div>
             <div className="tablecontain">

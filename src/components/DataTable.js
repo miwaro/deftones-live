@@ -72,11 +72,6 @@ function DataTable() {
                     setErrorMessage("Nothing Here Yet")
                 }
                 show.sets?.set[0]?.song.forEach(({ ...track }) => {
-
-                    if (track?.tape === true) {
-                        track.tape = '  '
-                        track.name = `${track.name} ${track.tape}`
-                    }
                     if (track?.info !== undefined) {
                         track.name = `${track.name} ${track.info}`
                     }
