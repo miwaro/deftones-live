@@ -1,7 +1,13 @@
+import Header from '../components/Header.js';
+import Footer from '../components/Footer.js';
+
+import '../App.css';
+
 function Shows() {
     return (
-        <div className="deftones__menu">
-            Shows
+        <div className="App" >
+        <Header />
+        <Footer />
         </div>
 
     )

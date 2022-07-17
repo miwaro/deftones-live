@@ -2,20 +2,70 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:300,300i,400&display=swap');
 
 html body {
-  cursor: pointer;
-  height: 100vh;
-  /* border: 20px solid grey; */
-  /* width: 80vw; */
   background-color: #0d0d0d;
 }
 
+#header { 
+    font-family: 'Raleway', sans-serif;
+    font-size: 40px;
+    color: #ffffff;
+    text-align: center;
+    padding: 50px 0 0;
+    text-transform: uppercase;
+ }
+
+ #header span {
+  font-weight:  300;
+ }
+
+ #header a {
+  text-decoration: none;
+  color: #fff;
+ }
+
+ #menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-family: 'Raleway', sans-serif;
+  font-size: 18px;
+ }
+
+ #menu a {
+  color: #fff;
+ }
+
+ #menu span {
+  display: inline-block;
+  padding: 20px;
+ }
+
+ #footer {
+  text-align:  center;
+  color: #fff;
+  padding-bottom: 50px;
+ }
+
+ #footer a {
+  color: #fff;
+  text-decoration:  none;
+ }
+
+ /*SHOWS STYLES*/
+
+ .react-bootstrap-table-pagination-total {
+  color: #fff;
+ }
+
 .btn__goBack {
-  /* background-color: #0d0d0d; */
   color: #FFF;
   font-weight: bold;
   color: black;
   width: 100px;
   padding: 4px 8px;
+  float: right;
+  margin-top: -40px;
 }
 
 .inputStyle {
@@ -31,26 +81,10 @@ transform: translate(30px, -8px)
   display: none;
 }
 
-.App-header {
-
-    justify-content: center;
-    align-items: center;
-    
-    padding: 15px;
-    gap:20px;
-    font-size: 40px;
-    background-color: #0d0d0d;
-    color: #FFF;
-    text-align: center;
-    width: 100%;
-}
-
 .setlist__container {
   background-color: #0d0d0d;
   color: #FFF;
   padding: 30px 0;
-  border-top: 1px solid #FFF;
-  height: 100vh;
 }
 
 .page-item.active .page-link {
@@ -65,32 +99,7 @@ transform: translate(30px, -8px)
   color: #fff !important;
 }
 
-.deftones__header { 
-    font-family: 'Raleway', sans-serif;
-    font-size: 40px;
-    color: #ffffff;
-    text-align: center;
-    padding: 50px 0 0;
-    text-transform: uppercase;
- }
 
- .deftones__header span {
-  font-weight:  300;
- }
-
- .deftones__menu {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-family: 'Raleway', sans-serif;
-  font-size: 18px;
- }
-
- .deftones__menu span {
-  display: inline-block;
-  padding: 20px;
- }
 
  .red {
   background-color: red;
@@ -100,6 +109,8 @@ transform: translate(30px, -8px)
   background-color: blue;
 
  }
+
+ .search { margin-bottom: 30px; }
 
  .search label { display: block; }
 

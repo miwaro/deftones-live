@@ -6,7 +6,7 @@ function AllTracks({ showTrackList, encore1, encore2, goBack }) {
                 <div className="setlist__container">
                     <div>
                         <h4>Main Set</h4><button className='btn__goBack' onClick={goBack}>Go Back</button>
-                        <hr />
+                        
                         {
                             showTrackList.map((track, i) => {
                                 return (
@@ -19,7 +19,7 @@ function AllTracks({ showTrackList, encore1, encore2, goBack }) {
                     </div>
                     <div>
                         <h4>Encore 1</h4>
-                        <hr />
+                        
                         {
                             encore1.map((encore, i) => {
                                 return (
@@ -32,7 +32,7 @@ function AllTracks({ showTrackList, encore1, encore2, goBack }) {
                     </div>
                     <div>
                         <h4>Encore 2</h4>
-                        <hr />
+                        
                         {
                             encore2.map((encore2, i) => {
                                 return (
