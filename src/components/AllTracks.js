@@ -11,7 +11,7 @@ function AllTracks({ showTrackList, encore1, encore2, goBack }) {
                             showTrackList.map((track, i) => {
                                 return (
                                     <div key={i} style={{ border: '1px solid #FFF', padding: '5px', backgroundColor: 'rgba(128, 128, 128, 0.636)' }} >
-                                        <li className={track.includes('  ') ? 'red' : 'blue'} style={{ listStyle: 'none', fontWeight: 'bold', padding: '5px 0' }}>{`${i + 1}. ${track}`}</li>
+                                        <li className={track.includes('  ') ? 'tape' : ''} style={{ listStyle: 'none', fontWeight: 'bold', padding: '5px 0' }}>{`${i + 1}. ${track}`}</li>
                                     </div>
                                 )
                             })

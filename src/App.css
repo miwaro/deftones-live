@@ -73,6 +73,17 @@ h1, h2, h3, h4 {
   color: #fff;
 }
 
+/*MOBILE RESETS FOR GLOBAL TAGS*/
+@media (max-width:960px) {
+  #common {
+    width: auto;
+    padding: 0 20px;
+  }
+  #footer {
+    padding:  0 20px;
+  }
+}
+
 /*HOMEPAGE STYLES*/
 
  .video-container { position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden; }
@@ -126,24 +137,15 @@ transform: translate(30px, -8px)
   color: #fff !important;
 }
 
+.tape { background-color: #222; }
 
+.search { margin-bottom: 30px; }
 
- .red {
-  background-color: red;
- }
+.search label { display: block; }
 
- .blue {
-  background-color: blue;
+.search input { max-width: 500px; margin: 0 auto; }
 
- }
-
- .search { margin-bottom: 30px; }
-
- .search label { display: block; }
-
- .search input { max-width: 500px; margin: 0 auto; }
-
- .tablecontain { margin: 0 50px; }
+.tablecontain { margin: 0 50px; }
 
 
 
