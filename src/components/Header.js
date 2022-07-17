@@ -4,10 +4,10 @@ function Header() {
     return (
         <div>
             <div id="header">
-                <Link to="home">Deftones<span>Live</span></Link>
+                <a href="/">Deftones<span>Live</span></a>
             </div>
             <div id="menu">
-                <Link to="home"><span>HOME</span></Link> - <Link to="shows"><span>SHOWS</span></Link> - <Link to="songs"><span>SONGS</span></Link>
+                <a href="/"><span>HOME</span></a> - <a href="/shows"><span>SHOWS</span></a> - <a href="/songs"><span>SONGS</span></a>
             </div>
         </div>
 

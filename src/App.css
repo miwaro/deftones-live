@@ -52,6 +52,17 @@ html body {
   text-decoration:  none;
  }
 
+ #common {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+ #common p {
+  text-align:  center;
+  color: #fff;
+}
+
  /*SHOWS STYLES*/
 
  .react-bootstrap-table-pagination-total {
@@ -117,6 +128,9 @@ transform: translate(30px, -8px)
  .search input { max-width: 500px; margin: 0 auto; }
 
  .tablecontain { margin: 0 50px; }
+
+
+
 
  
 
