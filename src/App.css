@@ -5,6 +5,16 @@ html body {
   background-color: #0d0d0d;
 }
 
+h1, h2, h3, h4 {
+  color: #fff;
+}
+
+.center { text-align: center; }
+
+.left { text-align: left; }
+
+.right { text-align: right; }
+
 #header { 
     font-family: 'Raleway', sans-serif;
     font-size: 40px;
@@ -45,6 +55,7 @@ html body {
   text-align:  center;
   color: #fff;
   padding-bottom: 50px;
+  padding-top: 50px;
  }
 
  #footer a {
@@ -59,9 +70,14 @@ html body {
 }
 
  #common p {
-  text-align:  center;
   color: #fff;
 }
+
+/*HOMEPAGE STYLES*/
+
+ .video-container { position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden; }
+
+ .video-container iframe, .video-container object, .video-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 
  /*SHOWS STYLES*/
 

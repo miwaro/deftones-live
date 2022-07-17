@@ -7,7 +7,7 @@ function About() {
     return (
         <div className="App" >
         <Header />
-        <div id="common">
+        <div id="common" class="center">
             <p>DeftonesLive is a fan run audio, video, and information archive of Deftones shows.</p>
         </div>
         <Footer />
