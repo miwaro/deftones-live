@@ -16,7 +16,7 @@ function AllTracks({ showTrackList, encore1, encore2, goBack }) {
                             })
                         }
                     </div>
-                    <div>
+                    <div className="encore">
                         {encore1.length > 0 &&
                             <h4>Encore 1</h4>
                         }
@@ -31,7 +31,7 @@ function AllTracks({ showTrackList, encore1, encore2, goBack }) {
                             })
                         }
                     </div>
-                    <div>
+                    <div className="encore">
                         {encore2.length > 0 &&
                             <h4>Encore 2</h4>
                         }
