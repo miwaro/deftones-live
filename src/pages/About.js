@@ -6,11 +6,11 @@ import '../App.css';
 function About() {
     return (
         <div className="App" >
-        <Header />
-        <div id="common" class="center">
-            <p>DeftonesLive is a fan run audio, video, and information archive of Deftones shows.</p>
-        </div>
-        <Footer />
+            <Header />
+            <div id="common" className="center">
+                <p>DeftonesLive is a fan run audio, video, and information archive of Deftones shows.</p>
+            </div>
+            <Footer />
         </div>
 
     )

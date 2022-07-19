@@ -1,6 +1,4 @@
 function AllTracks({ showTrackList, encore1, encore2, goBack }) {
-
-    console.log('zdgdbn', showTrackList)
     return (
         <div>
             <div className="tablecontain">
