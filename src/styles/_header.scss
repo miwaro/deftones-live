@@ -1,3 +1,36 @@
+#header { 
+    font-family: 'Raleway', sans-serif;
+    font-size: 40px;
+    color: #ffffff;
+    text-align: center;
+    padding: 50px 0 0;
+    text-transform: uppercase;
+ }
+
+ #header span {
+    font-weight:  300;
+   }
+  
+   #header a {
+    text-decoration: none;
+    color: #fff;
+   }
+  
+   #menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin: 20px 0;
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+   }
+  
+   #menu a {
+    color: #fff;
+   }
+
 .active {
     font-weight: 600;
 }

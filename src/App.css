@@ -22,51 +22,6 @@ h1, h2, h3, h4 {
 
 .right { text-align: right; }
 
-#header { 
-    font-family: 'Raleway', sans-serif;
-    font-size: 40px;
-    color: #ffffff;
-    text-align: center;
-    padding: 50px 0 0;
-    text-transform: uppercase;
- }
-
- #header span {
-  font-weight:  300;
- }
-
- #header a {
-  text-decoration: none;
-  color: #fff;
- }
-
- #menu {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
-  margin: 20px 0;
-  color: #fff;
-  font-family: 'Raleway', sans-serif;
-  font-size: 18px;
- }
-
- #menu a {
-  color: #fff;
- }
-
- #footer {
-  text-align:  center;
-  color: #fff;
-  padding-bottom: 50px;
-  padding-top: 50px;
- }
-
- #footer a {
-  color: #fff;
-  text-decoration:  none;
- }
-
  #common {
   width: 100%;
   max-width: 960px;
