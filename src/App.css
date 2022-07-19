@@ -9,6 +9,13 @@ h1, h2, h3, h4 {
   color: #fff;
 }
 
+.table, .page-link, .page-item.disabled .page-link { border-color: #222; }
+
+.react-bootstrap-table-pagination .page-item.active .page-link, .btn-secondary {
+  background-color: #333 !important;
+  border-color: #666 !important;
+}
+
 .center { text-align: center; }
 
 .left { text-align: left; }
@@ -125,6 +132,10 @@ transform: translate(30px, -8px)
   padding: 30px 0;
 }
 
+.setlist__container .encore {
+  margin-top: 20px;
+}
+
 .page-item.active .page-link {
   z-index: 3;
   color: #fff;
@@ -148,7 +159,7 @@ transform: translate(30px, -8px)
 .tablecontain { margin: 0 50px; }
 
 .allTracks {
-  border: 1px solid #FFF;
+  border: 1px solid #0d0d0d;
   padding: 5px;
   background-color: rgba(128, 128, 128, 0.636);
   list-style: none;

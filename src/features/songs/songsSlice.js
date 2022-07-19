@@ -1,7 +1,14 @@
 import { createSlice } from "@reduxjs/toolkit";
 import JSON from '../../json/deftones-songs.json';
 
-const initialState = {
+const initialState = JSON.map((showObj) => {
+    return {
+        ...showObj,
+        name: result
+    };
+})
+
+initialState = {
     songs: JSON.map((showObj),
     columnData: [
         { dataField: 'name', text: 'Song Name', sort: true, headerStyle: { color: '#FFF', backgroundColor: 'rgba(128, 128, 128, 0.636)' } },
