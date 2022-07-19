@@ -18,6 +18,7 @@ function DataTable() {
     const [encore1, setEncore1] = useState([])
     const [encore2, setEncore2] = useState([])
     const [errorMessage, setErrorMessage] = useState("")
+    const [isFilteredByEra, setIsFilteredByEra] = useState(false)
 
     const { SearchBar } = Search;
 
@@ -109,6 +110,11 @@ function DataTable() {
     }
 
     const handleDisplayWhitePonyEra = () => {
+        if (isFilteredByEra === true) {
+            setShowData(allShowData)
+            setIsFilteredByEra(false)
+            return;
+        }
         const listDate = [];
         const startDate = '1999-01-01';
         const endDate = '2002-01-01';
@@ -126,6 +132,7 @@ function DataTable() {
         })
 
         setShowData(filtered)
+        setIsFilteredByEra(true)
     }
 
     return (
