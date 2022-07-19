@@ -163,7 +163,7 @@ function DataTable() {
                                     bordered={false}
                                     pagination={!showTracks ? pagination : null}
                                     rowEvents={tableRowEvents}
-                                    rowStyle={{ backgroundColor: '#0d0d0d', color: 'white' }}
+                                    rowStyle={{ backgroundColor: '#0d0d0d', color: 'white', cursor: 'pointer' }}
                                     {...props.baseProps}
                                 />
                             </div>
