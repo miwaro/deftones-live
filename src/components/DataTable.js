@@ -108,6 +108,26 @@ function DataTable() {
         }
     }
 
+    const handleDisplayWhitePonyEra = () => {
+        const listDate = [];
+        const startDate = '1999-01-01';
+        const endDate = '2002-01-01';
+        const dateMove = new Date(startDate);
+        let strDate = startDate;
+
+        while (strDate < endDate) {
+            strDate = dateMove.toISOString().slice(0, 10);
+            listDate.push(strDate);
+            dateMove.setDate(dateMove.getDate() + 1);
+        };
+
+        let filtered = showData.filter((shows) => {
+            return listDate.includes(shows.eventDate);
+        })
+
+        setShowData(filtered)
+    }
+
     return (
         <div className="App" >
             <ToolkitProvider
@@ -125,6 +145,10 @@ function DataTable() {
                             <div>
                                 {/* TODO: Add debounce to searchbar */}
                                 <div className="search"><SearchBar {...props.searchProps} placeholder="Search..." autofocus /></div>
+                            </div>
+                            <div style={{ display: 'flex', justifyContent: 'left', paddingLeft: '60px', paddingBottom: '10px' }}>
+                                <h5 style={{ color: 'white', paddingRight: '50px' }}>Eras:</h5>
+                                <button style={{ padding: '4px 8px', fontWeight: 'bold' }} onClick={handleDisplayWhitePonyEra}>White Pony (1999-2002)</button>
                             </div>
                             <div className="tablecontain">
                                 <BootstrapTable
