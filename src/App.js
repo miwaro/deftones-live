@@ -10,7 +10,7 @@ function App() {
       <Header />
       <div id="common">
         <div className="video-container">
-          <iframe width="100%" height="auto" src="https://www.youtube.com/embed/70wKncA9Kbc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe width="100%" height="auto" src="https://www.youtube.com/embed/70wKncA9Kbc" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
         </div>
         <h3>Deftones - Lovers (live debut)</h3>
         <p>Moda Center<br />
