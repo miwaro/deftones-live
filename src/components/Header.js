@@ -1,18 +1,30 @@
-import { Link } from "react-router-dom";
-function Header() {
+import { NavLink } from "react-router-dom";
 
+function Header() {
     return (
         <div>
             <div id="header">
-                <Link to="/">Deftones<span>Live</span></Link>
+                <NavLink to="/">Deftones<span>Live</span></NavLink>
             </div>
             <div id="menu">
-                <Link to="/"><span>HOME</span></Link> - <Link to="/shows"><span>SHOWS</span></Link> - <Link to="/songs"><span>SONGS</span></Link>
+                <NavLink
+                    className={(navData) => navData.isActive ? "active" : "notActive"}
+                    to="/">
+                    <span>HOME</span>
+                </NavLink> -
+                <NavLink
+                    className={(navData) => navData.isActive ? "active" : "notActive"}
+                    to="/shows">
+                    <span>SHOWS</span>
+                </NavLink> -
+                <NavLink
+                    className={(navData) => navData.isActive ? "active" : "notActive"}
+                    to="/songs">
+                    <span>SONGS</span>
+                </NavLink>
             </div>
         </div>
-
     )
-
 }
 
 export default Header;

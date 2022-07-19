@@ -8,6 +8,7 @@ import Home from './pages/Home.js';
 import Shows from './pages/Shows.js';
 import Songs from './pages/Songs.js';
 import About from './pages/About.js';
+import './styles/styles.scss';
 
 import {
   BrowserRouter, Routes,

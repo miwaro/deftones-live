@@ -22,11 +22,11 @@ function DataTable() {
     const { SearchBar } = Search;
 
     // const dispatch = useDispatch();
-    const showAllData = useSelector(allShows)
+    const allShowData = useSelector(allShows)
     const columns = useSelector(columnData)
 
     useEffect(() => {
-        setShowData(showAllData)
+        setShowData(allShowData)
     }, [])
 
     const pagination = paginationFactory({
@@ -46,7 +46,7 @@ function DataTable() {
         setErrorMessage("")
         setEncore1([]);
         setEncore2([]);
-        let allData = showAllData.map((shows) => {
+        let allData = allShowData.map((shows) => {
             return {
                 ...shows
             };
