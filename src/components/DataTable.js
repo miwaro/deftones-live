@@ -71,7 +71,9 @@ function DataTable() {
                 ) {
                     setErrorMessage("Nothing Here Yet")
                 }
-                show.sets?.set[0]?.song.forEach(({ ...track }) => {
+                let songArray = show.sets?.set[0]?.song
+                let songsExcludingTapeTracksArr = songArray.filter(track => track.tape !== true)
+                songsExcludingTapeTracksArr.forEach(({ ...track }) => {
                     if (track?.info !== undefined) {
                         track.name = `${track.name} ${track.info}`
                     }

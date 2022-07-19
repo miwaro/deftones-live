@@ -1,4 +1,6 @@
 function AllTracks({ showTrackList, encore1, encore2, goBack }) {
+
+    console.log('zdgdbn', showTrackList)
     return (
         <div>
             <div className="tablecontain">
@@ -7,13 +9,14 @@ function AllTracks({ showTrackList, encore1, encore2, goBack }) {
                         <h4>Main Set</h4><button className='btn__goBack' onClick={goBack}>Go Back</button>
 
                         {
-                            showTrackList.map((track, i) => {
-                                return (
-                                    <div key={i} className="allTracks">
-                                        <li >{`${i + 1}. ${track}`}</li>
-                                    </div>
-                                )
-                            })
+                            showTrackList
+                                .map((track, i) => {
+                                    return (
+                                        <div key={i} className="allTracks">
+                                            <li >{`${i + 1}. ${track}`}</li>
+                                        </div>
+                                    )
+                                })
                         }
                     </div>
                     <div>
