@@ -9,6 +9,7 @@ import ToolkitProvider, { Search } from 'react-bootstrap-table2-toolkit/dist/rea
 import { useSelector } from "react-redux";
 import { allShows, columnData } from "../features/shows/showsSlice"
 import AllTracks from './AllTracks.js'
+import Eras from './Eras.js'
 // import { addShows } from "../features/shows/showsSlice";
 
 function DataTable() {
@@ -18,7 +19,6 @@ function DataTable() {
     const [encore1, setEncore1] = useState([])
     const [encore2, setEncore2] = useState([])
     const [errorMessage, setErrorMessage] = useState("")
-    const [isFilteredByEra, setIsFilteredByEra] = useState(false)
 
     const { SearchBar } = Search;
 
@@ -109,15 +109,8 @@ function DataTable() {
         }
     }
 
-    const handleDisplayWhitePonyEra = () => {
-        if (isFilteredByEra === true) {
-            setShowData(allShowData)
-            setIsFilteredByEra(false)
-            return;
-        }
+    const handleDisplayEra = (startDate, endDate) => {
         const listDate = [];
-        const startDate = '1999-01-01';
-        const endDate = '2002-01-01';
         const dateMove = new Date(startDate);
         let strDate = startDate;
 
@@ -127,12 +120,11 @@ function DataTable() {
             dateMove.setDate(dateMove.getDate() + 1);
         };
 
-        let filtered = showData.filter((shows) => {
+        let filtered = allShowData.filter((shows) => {
             return listDate.includes(shows.eventDate);
         })
 
         setShowData(filtered)
-        setIsFilteredByEra(true)
     }
 
     return (
@@ -153,10 +145,7 @@ function DataTable() {
                                 {/* TODO: Add debounce to searchbar */}
                                 <div className="search"><SearchBar {...props.searchProps} placeholder="Search..." autofocus /></div>
                             </div>
-                            <div style={{ display: 'flex', justifyContent: 'left', paddingLeft: '60px', paddingBottom: '10px' }}>
-                                <h5 style={{ color: 'white', paddingRight: '50px' }}>Eras:</h5>
-                                <button style={{ padding: '4px 8px', fontWeight: 'bold' }} onClick={handleDisplayWhitePonyEra}>White Pony (1999-2002)</button>
-                            </div>
+                            <Eras displayEra={handleDisplayEra} />
                             <div className="tablecontain">
                                 <BootstrapTable
                                     sort={{ dataField: 'eventDate', order: 'desc' }}
