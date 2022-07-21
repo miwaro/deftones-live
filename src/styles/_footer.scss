@@ -1,11 +1,14 @@
+@import "./colors";
+
 #footer {
     text-align:  center;
-    color: #fff;
+    color: $white;
     padding-bottom: 50px;
     padding-top: 50px;
+
+    a {
+        color: $white;
+        text-decoration:  none;
+    }
    }
   
-   #footer a {
-    color: #fff;
-    text-decoration:  none;
-   }

@@ -1,40 +1,60 @@
+@import "./colors";
+
 #header { 
     font-family: 'Raleway', sans-serif;
     font-size: 40px;
-    color: #ffffff;
+    color: $white;
     text-align: center;
     padding: 50px 0 0;
     text-transform: uppercase;
- }
 
- #header span {
-    font-weight:  300;
+    a {
+        text-decoration: none;
+        color: $white;
+
+        &:hover {
+            color: #ddd;
+            transition: color 0.5s ease;
+        }
+
+        span {
+            font-weight:  300;
+        }
    }
+ }
   
-   #header a {
-    text-decoration: none;
-    color: #fff;
-   }
-  
-   #menu {
+#menu {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 15px;
     margin: 20px 0;
-    color: #fff;
+    color: $white;
     font-family: 'Raleway', sans-serif;
     font-size: 18px;
-   }
-  
-   #menu a {
-    color: #fff;
-   }
 
-.active {
-    font-weight: 600;
+    a { 
+        text-decoration: none; 
+        color: $white;
+
+        &:hover {
+            color: #ddd;
+            transition: color 0.5s ease;
+        }
+    }
+
+    .active {
+        border-bottom: 1px solid $white;
+
+        &:hover {
+            border-bottom: 1px solid #ddd;
+            transition: color 0.5s ease;
+        }
+    }
+
+    .notActive {
+        
+    }
 }
 
-.notActive {
-    text-decoration: none;
-}
+
