@@ -3,12 +3,12 @@ import Footer from '../../components/Footer.js';
 
 import '../../App.css';
 
-function WhitePony() {
+function BlackStallion() {
     return (
         <div className="App" >
             <Header />
             <div id="common">
-                <h2>White Pony</h2>
+                <h2>Black Stallion</h2>
                 <ol>
                     <li>Feiticeira</li>
                     <li>Digital Bath</li>
@@ -34,4 +34,4 @@ function WhitePony() {
     )
 }
 
-export default WhitePony;
+export default BlackStallion;

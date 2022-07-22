@@ -27,6 +27,8 @@ h1, h2, h3, h4 {
 
 .right { text-align: right; }
 
+
+
  #common {
   width: 100%;
   max-width: 960px;
@@ -54,6 +56,34 @@ h1, h2, h3, h4 {
  .video-container { position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden; }
 
  .video-container iframe, .video-container object, .video-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+ /*SONGS STYLES*/
+
+ #albums {
+
+  .albumgroup {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    div {
+      width:75px;
+    }
+
+    img {
+      width: 100%;
+    }
+
+    p {
+      text-align: center;
+    }
+  }
+
+  
+
+  
+
+ }
 
  /*SHOWS STYLES*/
 
@@ -117,6 +147,9 @@ transform: translate(30px, -8px)
 	input { max-width: 500px; margin: 0 auto; }
 }
 
+select { 
+	border-radius: .25rem;
+}
 
 .tablecontain { margin: 0 50px; }
 
