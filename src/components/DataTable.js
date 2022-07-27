@@ -73,8 +73,8 @@ function DataTable() {
                     setErrorMessage("Nothing Here Yet")
                 }
                 let songArray = show.sets?.set[0]?.song
-                let songsExcludingTapeTracksArr = songArray.filter(track => track.tape !== true)
-                songsExcludingTapeTracksArr.forEach(({ ...track }) => {
+                let songsExcludingTapeTracksArr = songArray?.filter(track => track.tape !== true)
+                songsExcludingTapeTracksArr?.forEach(({ ...track }) => {
                     if (track?.info !== undefined) {
                         track.name = `${track.name} ${track.info}`
                     }
@@ -160,8 +160,10 @@ function DataTable() {
                     )
                 }
             </ToolkitProvider>
+            <div style={{ display: 'flex', justifyContent: 'center', color: 'Red' }}> {errorMessage}</div>
 
-            {showTracks &&
+            {
+                showTracks &&
                 <AllTracks
                     showTrackList={showTrackList}
                     encore1={encore1}
