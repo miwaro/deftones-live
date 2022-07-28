@@ -1,11 +1,23 @@
 import React, { useState, useEffect } from 'react';
 
-function Eras({ displayEra }) {
+function Eras({ displayEra, defaultEra }) {
     const [selectedEra, setSelectedEra] = useState("");
 
     useEffect(() => {
+        if (defaultEra === "All") {
+            displayEra('1987-01-01', '2023-01-01')
+            setSelectedEra("All")
+        }
+    }, [defaultEra])
+
+
+    useEffect(() => {
         let era = selectedEra;
+
         switch (era) {
+            case "All":
+                displayEra('1987-01-01', '2023-01-01')
+                break;
             case "Early Days":
                 displayEra('1988-01-01', '1994-01-01')
                 break;

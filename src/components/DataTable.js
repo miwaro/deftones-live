@@ -19,6 +19,7 @@ function DataTable() {
     const [encore1, setEncore1] = useState([])
     const [encore2, setEncore2] = useState([])
     const [errorMessage, setErrorMessage] = useState("")
+    const [defaultEra, setDefaultEra] = useState("")
 
     const { SearchBar } = Search;
 
@@ -42,6 +43,7 @@ function DataTable() {
     })
 
     const handleGoBack = () => {
+        setDefaultEra("All")
         setShowTracks(false);
         setShowTrackList([]);
         setErrorMessage("")
@@ -57,7 +59,7 @@ function DataTable() {
 
     const tableRowEvents = {
         onClick: (e, row, rowIndex) => {
-
+            setDefaultEra("")
             if (showData.length === 1) {
                 return handleGoBack();
             }
@@ -145,7 +147,7 @@ function DataTable() {
                                 {/* TODO: Add debounce to searchbar */}
                                 <div className="search"><SearchBar {...props.searchProps} placeholder="Search..." autofocus /></div>
                             </div>
-                            <Eras displayEra={handleDisplayEra} />
+                            <Eras displayEra={handleDisplayEra} defaultEra={defaultEra} />
                             <div className="tablecontain">
                                 <BootstrapTable
                                     sort={{ dataField: 'eventDate', order: 'desc' }}
