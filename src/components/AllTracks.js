@@ -1,4 +1,4 @@
-function AllTracks({ showTrackList, encore1, encore2, goBack }) {
+function AllTracks({ showTrackList, encore1, encore2, info, goBack }) {
     return (
         <div>
             <div className="tablecontain">
@@ -47,6 +47,12 @@ function AllTracks({ showTrackList, encore1, encore2, goBack }) {
                                 )
                             })
                         }
+                        {
+                            info !== undefined &&
+                            <h4>Info</h4>
+                        }
+
+                        <div className="allTracks">{info}</div>
                     </div>
                 </div>
             </div>

@@ -18,6 +18,7 @@ function DataTable() {
     const [showTrackList, setShowTrackList] = useState([])
     const [encore1, setEncore1] = useState([])
     const [encore2, setEncore2] = useState([])
+    const [info, setInfo] = useState("")
     const [errorMessage, setErrorMessage] = useState("")
     const [defaultEra, setDefaultEra] = useState("")
 
@@ -103,6 +104,11 @@ function DataTable() {
                 })
             })
 
+            singleShow.forEach(show => {
+                console.log('showInfo', show.info)
+                setInfo(show.info)
+            })
+
             setShowData(singleShow);
             setShowTrackList(showTrackList)
             setEncore1(encore1)
@@ -170,6 +176,7 @@ function DataTable() {
                     showTrackList={showTrackList}
                     encore1={encore1}
                     encore2={encore2}
+                    info={info}
                     goBack={handleGoBack}
                 />
             }
