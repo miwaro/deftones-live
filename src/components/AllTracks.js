@@ -49,10 +49,12 @@ function AllTracks({ showTrackList, encore1, encore2, info, goBack }) {
                         }
                         {
                             info !== undefined &&
-                            <h4>Info</h4>
+                            <>
+                                <h4>Info</h4>
+                                <div className="allTracks">{info}</div>
+                            </>
                         }
 
-                        <div className="allTracks">{info}</div>
                     </div>
                 </div>
             </div>
