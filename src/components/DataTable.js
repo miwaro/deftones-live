@@ -151,7 +151,7 @@ function DataTable() {
                         <div>
                             <div>
                                 {/* TODO: Add debounce to searchbar */}
-                                <div className="search"><SearchBar {...props.searchProps} placeholder="Search..." autofocus /></div>
+                                <div className="search"><SearchBar {...props.searchProps} placeholder="Search City, State, Venue, etc..." autofocus /></div>
                             </div>
                             <Eras displayEra={handleDisplayEra} defaultEra={defaultEra} />
                             <div className="tablecontain">
