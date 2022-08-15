@@ -7,9 +7,9 @@ import '../App.css';
 function Shows() {
     return (
         <div className="App" >
-        <Header />
-        <DataTable />
-        <Footer />
+            <Header />
+            <DataTable />
+            <Footer />
         </div>
 
     )

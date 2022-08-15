@@ -149,6 +149,13 @@ transform: translate(30px, -8px)
 	input { max-width: 500px; margin: 0 auto; }
 }
 
+.songSearch {
+  label { display: block; }
+
+	input { max-width: 500px; margin: 0 auto; }
+  margin:30px;
+}
+
 select { 
 	border-radius: .25rem;
 }

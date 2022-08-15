@@ -1,6 +1,7 @@
 import Header from '../components/Header.js';
 import Footer from '../components/Footer.js';
 import { NavLink } from "react-router-dom";
+import SongTable from "../components/SongsDataTable.js";
 
 import '../App.css';
 
@@ -51,6 +52,7 @@ function Songs() {
                             <img src="../albumcovers/BlackStallion.jpg" alt="Black Stallion" />
                         </div>
                     </div>
+                    <SongTable />
                 </div>
             </div>
             <Footer />
