@@ -52,8 +52,9 @@ function Songs() {
                             <img src="../albumcovers/BlackStallion.jpg" alt="Black Stallion" />
                         </div>
                     </div>
-                    <SongTable />
                 </div>
+                <SongTable />
+
             </div>
             <Footer />
         </div>

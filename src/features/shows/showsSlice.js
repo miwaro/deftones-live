@@ -34,10 +34,10 @@ const initialState = {
         { dataField: 'tour.name', text: 'Tour', headerStyle: { color: '#FFF', backgroundColor: 'rgba(128, 128, 128, 0.636)' } }
     ],
     columnSongData: [
-        { dataField: 'timestamp', text: 'Date', sort: true, headerStyle: { color: '#FFF', backgroundColor: 'rgba(128, 128, 128, 0.636)' } },
+        { dataField: 'timestamp', text: 'Date', hidden: true, sort: true, headerStyle: { color: '#FFF', backgroundColor: 'rgba(128, 128, 128, 0.636)' } },
         { dataField: 'name', text: 'Name', headerStyle: { color: '#FFF', backgroundColor: 'rgba(128, 128, 128, 0.636)' } },
         { dataField: 'album', text: 'Album', headerStyle: { color: '#FFF', backgroundColor: 'rgba(128, 128, 128, 0.636)' } },
-        { dataField: 'lyrics', text: 'Lyrics', headerStyle: { color: '#FFF', backgroundColor: 'rgba(128, 128, 128, 0.636)' } },
+        { dataField: 'lyrics', text: 'Lyrics', hidden: true, headerStyle: { color: '#FFF', backgroundColor: 'rgba(128, 128, 128, 0.636)' } },
     ],
 }
 
