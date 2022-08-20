@@ -78,6 +78,7 @@ function SongDataTable() {
                                     <BootstrapTable
                                         sort={{ dataField: 'timestamp', order: 'desc' }}
                                         // pagination={!showTracks ? pagination : null}
+                                        bordered={false}
                                         pagination={pagination}
                                         rowEvents={tableRowEvents}
                                         rowStyle={{ backgroundColor: '#0d0d0d', color: 'white', cursor: 'pointer' }}
